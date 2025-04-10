@@ -1,54 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <!-- This section defines the project -->
-    <PropertyGroup>
-        <!-- Specifies the version of .NET the project targets -->
-        <TargetFramework>net8</TargetFramework>
+  <!-- This section defines the project -->
+  <PropertyGroup>
+    <!-- Specifies the version of .NET the project targets -->
+    <TargetFramework>net8</TargetFramework>
 
-        <!-- Specifies the version of the C# language to use -->
-        <LangVersion>latest</LangVersion>
+    <!-- Specifies the version of the C# language to use -->
+    <LangVersion>latest</LangVersion>
 
-        <!-- Prevents adding the target framework version to the output folder name -->
-        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- Prevents adding the target framework version to the output folder name -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 
-        <!-- The project will be compiled to run on any CPU architecture -->
-        <Platforms>AnyCPU</Platforms>
+    <!-- The project will be compiled to run on any CPU architecture -->
+    <Platforms>AnyCPU</Platforms>
 
-        <!-- Quantower property that defines the type of the algorithm -->
-        <AlgoType>Indicator</AlgoType>
+    <!-- Quantower property that defines the type of the algorithm -->
+    <AlgoType>Indicator</AlgoType>
 
-        <!-- The name of the output assembly after build -->
-        <AssemblyName>HelloWorldIndicator</AssemblyName>
+    <!-- The name of the output assembly after build -->
+    <AssemblyName>HelloWorldIndicator</AssemblyName>
 
-        <!-- The root namespace used throughout the project -->
-        <RootNamespace>HelloWorldIndicator</RootNamespace>
-    </PropertyGroup>
+    <!-- The root namespace used throughout the project -->
+    <RootNamespace>HelloWorldIndicator</RootNamespace>
+  </PropertyGroup>
 
-    <!-- 
-      This section defines the output folder for the "Debug|AnyCPU" 
-      configuration 
-      -->
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-        <OutputPath>..\..\..\Desktop\Quantower\TradingPlatform\v1.142.6\..\..\Settings\Scripts\Indicators\HelloWorld</OutputPath>
-    </PropertyGroup>
+  <!-- 
+    This section defines the output folder for the "Debug|AnyCPU" 
+    configuration 
 
-    <!-- 
-      This section defines the output folder for the "Release|AnyCPU" 
-      configuration 
-      -->
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-        <OutputPath>..\..\..\Desktop\Quantower\TradingPlatform\v1.142.6\..\..\Settings\Scripts\Indicators\HelloWorld</OutputPath>
-    </PropertyGroup>
+    [ ⚠️ IMPORTANT: Update this path to match your local Quantower installation ]
+    -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\Desktop\Quantower\TradingPlatform\v1.142.6\..\..\Settings\Scripts\Indicators\HelloWorld</OutputPath>
+  </PropertyGroup>
 
-    <!--  
-      This section adds a reference to an external DLL, which is 
-      required for the project 
-      -->
-    <ItemGroup>
-        <Reference Include="TradingPlatform.BusinessLayer">
-            <HintPath>..\..\..\Desktop\Quantower\TradingPlatform\v1.142.7\bin\TradingPlatform.BusinessLayer.dll</HintPath>
-        </Reference>
-    </ItemGroup>
+  <!-- 
+    This section defines the output folder for the "Release|AnyCPU" 
+    configuration 
+
+    [ ⚠️ IMPORTANT: Update this path to match your local Quantower installation ]
+    -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\Desktop\Quantower\TradingPlatform\v1.142.6\..\..\Settings\Scripts\Indicators\HelloWorld</OutputPath>
+  </PropertyGroup>
+
+  <!--
+    This section adds a reference to an external DLL, which is 
+    required for the project 
+
+    [ ⚠️ IMPORTANT: Update this path to match your local Quantower installation ]
+    -->
+  <ItemGroup>
+    <Reference Include="TradingPlatform.BusinessLayer">
+      <HintPath>..\..\..\Desktop\Quantower\TradingPlatform\v1.142.7\bin\TradingPlatform.BusinessLayer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
 
 </Project>
